@@ -6,7 +6,7 @@ This part of mirror will...
 
 import React from 'react';
 import Clock from 'react-live-clock';
-import { Switch } from 'antd';
+//import { Switch } from 'antd';
 import moment from 'moment';
 //import './time.css';
 
@@ -14,7 +14,7 @@ const ClockApp = () => {
   return (
     <div className="clock-app">
       <div className="time">
-        <Clock format={"h:mm:ss a"} ticking={true} timezone={"GMT+7"} />
+        <Clock format={"h:mm:ss a"} ticking={true} timezone={"Asia/Bangkok"} />
       </div>
       <div className="toggle-date">
         {moment().format('MMMM Do YYYY')}
