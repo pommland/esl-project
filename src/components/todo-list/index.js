@@ -6,10 +6,34 @@ This part of mirror will...
 */
 import React, { Component } from 'react';
 import '../../App.css';
+
+const Todo = ({ todo }) => {
+    return (
+        <li>
+            {todo.value}
+        </li>
+    );
+}
+
+
 class TodoListApp extends Component {
-    state = {}
+    state = {
+        todos: [
+            {
+                value: "I love Choccy milk",
+                owner: "ApexTone",
+                id: 123
+            }
+        ],
+    }
     render() {
-        return (<div className="todo-app">TODO APP</div>);
+        return (
+            <div className="todo-app">
+                TODO APP
+                <ul style={{ "list-style-type": "none" }}>
+                    {this.state.todos.map(todo => <Todo todo={todo} key={todo.id} />)}
+                </ul>
+            </div >);
     }
 }
 
