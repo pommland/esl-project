@@ -6,10 +6,18 @@ This part of mirror will...
 */
 import React, { Component } from 'react';
 import '../../App.css';
+
 class WeatherApp extends Component {
     state = {}
+    componentWillMount() {
+        console.log('Fetch Data')
+    }
     render() {
-        return (<div className="weather-app">WEATHER APP</div>);
+        return (
+            <div className="weather-app">
+                WEATHER APP
+            </div>
+        );
     }
 }
 
