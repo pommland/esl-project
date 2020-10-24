@@ -13,10 +13,9 @@ const GreetingWord = (props) => {
     const [index, setIndex] = useState(0);
     useEffect(() => {
         const changeWord = setTimeout(() => {
-            //console.log(word, index);
             setWord(wordList[index % wordList.length]);
             setIndex((index + 1) % wordList.length);
-        }, 10000);
+        }, 2000);
         return () => clearInterval(changeWord)
     }, [index]);
     return (
